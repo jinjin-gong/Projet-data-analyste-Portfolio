@@ -51,6 +51,7 @@ SELECT
 FROM Population
 GROUP BY Pays;
 ```
+```
 SELECT 
     Pays, 
     SUM(Population_Rurale) / SUM(Population_Totale) * 100 AS Taux_Rurale,
