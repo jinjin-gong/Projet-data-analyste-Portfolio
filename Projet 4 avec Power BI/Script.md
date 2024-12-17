@@ -24,7 +24,7 @@ DWFA-Réaliser une analyse de la condition d'Accèes à l'eau Potable dans le mo
 2) Scripts DAX
 Exemples de formules DAX pour Power BI.
 
-a) Calculer le taux d’accès à l’eau potable:
+   a) Calculer le taux d’accès à l’eau potable:
 ```
 Taux_Acces_EauPotable = 
 DIVIDE(
@@ -33,7 +33,7 @@ DIVIDE(
     0
 )
 ```
-b) Évolution du taux de mortalité dans le temps:
+   b) Évolution du taux de mortalité dans le temps:
 ```
 Evolution_Mortalite = 
 CALCULATE(
@@ -41,9 +41,19 @@ CALCULATE(
     DATESYTD('Date'[Date])
 )
 ```
+   c) Mesure pour filtrer les pays avec une mortalité élevée
+ ```
+  Pays_Mortalite_Elevee = 
+IF(
+    SUM(Mortalite[Taux_Mortalite]) > 10,
+    "Mortalité Élevée",
+    "Mortalité Faible"
+)
+```
 3. Scripts SQL
-   
-a) Taux de population rurale vs urbaine:
+   requêtes pour PostgreSQL, MySQL ou autre.
+
+   a) Taux de population rurale vs urbaine
 ```
 SELECT 
     Pays, 
@@ -53,14 +63,8 @@ FROM Population
 GROUP BY Pays;
 ```
 ```
-SELECT 
-    Pays, 
-    SUM(Population_Rurale) / SUM(Population_Totale) * 100 AS Taux_Rurale,
-    SUM(Population_Urbaine) / SUM(Population_Totale) * 100 AS Taux_Urbaine
-FROM Population
-GROUP BY Pays;
-```
-b) Jointure pour stabilité politique et accès à l'eau:
+   b) Jointure pour stabilité politique et accès à l'eau:
+
 ```
 SELECT 
     p.Pays, 
@@ -70,25 +74,32 @@ FROM EauPotable e
 JOIN StabilitePolitique s 
 ON e.Pays_ID = s.Pays_ID;
 ```
-Chargement des données
+
+4. Automatisation en Python
+
+   a) Traitement des données
 ```
+import pandas as pd
+
+# Chargement des données
 data = pd.read_csv('data/raw/eau_potable.csv')
-```
-Nettoyage des données
-```
+
+# Nettoyage des données
 data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
-```
-Export
-```
+
+# Export
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
 ```
+    b) Création de visualisations
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
-```
-Création du graphique
-```
+
+# Chargement des données nettoyées
+data = pd.read_csv('data/processed/data_clean.csv')
+
+# Création du graphique
 plt.plot(data['Annee'], data['Taux_AccesEau'])
 plt.title("Évolution de l'accès à l'eau potable")
 plt.xlabel("Année")
