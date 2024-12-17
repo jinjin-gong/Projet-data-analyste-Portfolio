@@ -112,4 +112,3 @@ Gestion de projet:
 
     ▪ Traduction des besoins en fonctionnalités concrètes.
     ▪ Conception de mockups et blueprint.
-
