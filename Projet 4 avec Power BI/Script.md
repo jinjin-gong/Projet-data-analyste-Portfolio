@@ -41,6 +41,7 @@ CALCULATE(
 )
 ```
 3. Scripts SQL
+   
 a) Taux de population rurale vs urbaine:
 ```
 SELECT 
