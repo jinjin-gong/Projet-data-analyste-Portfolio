@@ -8,6 +8,8 @@ Consulting sur les politiques publiques.
 
 
 Objectif :
+
+
 Créer un tableau de bord synthétique permettant d'identifier les pays nécessitant une intervention prioritaire, en tenant compte des trois domaines d'expertise.
 Problématique : Identifier les pays prioritaires en fonction des indicateurs clés (accès à l’eau potable, stabilité politique, mortalité liée à l’eau insalubre, etc.).
 Solution apportée : Tableau de bord interactif avec 3 niveaux de granularité (mondial, continental, national).
@@ -55,8 +57,12 @@ Traitements réalisés :
 
 
 D. Mockups et Blueprint
+
+
 Intégrez des captures ou visuels des mockups réalisés pour les vues (mondiale, continentale, nationale).
-Décrivez brièvement chaque vue :
+
+
+Décrire brièvement chaque vue :
 
     ▪ **Vue mondiale :** Carte interactive des indicateurs agrégés.
 
@@ -68,23 +74,23 @@ Décrivez brièvement chaque vue :
 Résultat final
 
 
-**Visualisations clés :**
+Visualisations clés :
 
     ▪ Carte du monde avec taux d’accès à l’eau potable.
     ▪ Line plot montrant l’évolution des indicateurs.
     ▪ Scatter plot pour comparer deux indicateurs.
     
-**Fonctionnalités interactives :**
+Fonctionnalités interactives :
 
     ▪ Filtres géographiques, temporels et qualitatifs.
     ▪ Navigation intuitive entre les vues.
     
-**Impact pour DWFA :**
+Impact pour DWFA :
 
     ▪ Identification rapide des pays prioritaires pour les investissements.
     ▪ Meilleure compréhension des besoins par domaine d’expertise.
     
-**Apprentissages personnels :**
+Apprentissages personnels :
 
     ▪ Analyse multi-niveaux (mondiale, continentale, nationale).
     ▪ Création de visualisations interactives pour la prise de décision.
@@ -92,18 +98,17 @@ Résultat final
 
 Compétences mises en avant
 
-
-**Techniques de data analysis :**
+Techniques de data analysis :
 
     ▪ Exploration et nettoyage des données.
     ▪ Création d’indicateurs calculés et agrégés.
     
-**Visualisation de données :**
+Visualisation de données :
 
     ▪ Maîtrise de Tableau / Power BI.
     ▪ Utilisation de cartes, line plots, bar plots, scatter plots.
     
-**Gestion de projet :**
+Gestion de projet:
 
     ▪ Traduction des besoins en fonctionnalités concrètes.
     ▪ Conception de mockups et blueprint.
