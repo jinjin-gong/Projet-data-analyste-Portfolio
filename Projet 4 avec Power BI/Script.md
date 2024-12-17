@@ -1,6 +1,6 @@
 1) Organisation du Projet GitHub
-
-DWFA-AccessEauPotable/
+```
+DWFA-Réaliser une analyse de la condition d'Accèes à l'eau Potable dans le monde
 │
 ├── README.md          # Documentation principale
 ├── scripts/
@@ -20,7 +20,7 @@ DWFA-AccessEauPotable/
 │
 └── reports/           # Résultats ou images de visualisation
     └── dashboard_screenshot.png
-
+```
 2) Scripts DAX
 
 Voici des exemples de formules DAX pour Power BI.
@@ -28,45 +28,45 @@ Voici des exemples de formules DAX pour Power BI.
 a) Calculer le taux d’accès à l’eau potable
 Créez un fichier taux_acces_potable.dax :
 
-'''
+```
 Taux_Acces_EauPotable = 
 DIVIDE(
     SUM('EauPotable'[Population_AccesEau]),
     SUM('EauPotable'[Population_Totale]),
     0
 )
-'''
+```
 b) Évolution du taux de mortalité dans le temps
 Créez un fichier evolution_taux_mortalite.dax :
-'''
+```
 Evolution_Mortalite = 
 CALCULATE(
     SUM('Mortalite'[Taux_Mortalite]),
     DATESYTD('Date'[Date])
 )
-'''
+```
 3. Scripts SQL
 Vos calculs ou requêtes pour PostgreSQL, MySQL ou autre.
 a) Taux de population rurale vs urbaine
 Créez un fichier taux_population_rurale.sql :
-‘’’
+```
 SELECT 
     Pays, 
     SUM(Population_Rurale) / SUM(Population_Totale) * 100 AS Taux_Rurale,
     SUM(Population_Urbaine) / SUM(Population_Totale) * 100 AS Taux_Urbaine
 FROM Population
 GROUP BY Pays;
-‘’’
+```
 SELECT 
     Pays, 
     SUM(Population_Rurale) / SUM(Population_Totale) * 100 AS Taux_Rurale,
     SUM(Population_Urbaine) / SUM(Population_Totale) * 100 AS Taux_Urbaine
 FROM Population
 GROUP BY Pays;
-‘’’
+```
 b) Jointure pour stabilité politique et accès à l'eau
 Créez un fichier jointure_stabilite_politique.sql :
-‘’’
+```
 SELECT 
     p.Pays, 
     e.Taux_AccesEau,
@@ -74,7 +74,7 @@ SELECT
 FROM EauPotable e
 JOIN StabilitePolitique s 
 ON e.Pays_ID = s.Pays_ID;
-‘’’
+```
 4. Automatisation en Python
 Si vous utilisez Python pour traiter les données, créez des scripts.
 a) Traitement des données
@@ -91,7 +91,7 @@ data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
 
-‘’’
+```
 import pandas as pd
 
 # Chargement des données
@@ -103,7 +103,7 @@ data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
 # Export
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
-‘’’
+```
 visualisation_data.py :
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -112,13 +112,13 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('data/processed/data_clean.csv')
 
 # Création du graphique
-‘’’
+```
 plt.plot(data['Annee'], data['Taux_AccesEau'])
 plt.title("Évolution de l'accès à l'eau potable")
 plt.xlabel("Année")
 plt.ylabel("Taux d'accès à l'eau (%)")
 plt.show()
-‘’’
+```
 
 ## Scripts utilisés dans le projet
 
@@ -126,7 +126,7 @@ plt.show()
 Les scripts SQL permettent d'extraire et de préparer les données depuis la base de données source.
 
 - [extraction_data.sql](scripts/sql/extraction_data.sql) : Extraction des ventes sur une période donnée.
-'''
+```
 
 - [nettoyage_data.sql](scripts/sql/nettoyage_data.sql) : Nettoyage des données et suppression des doublons.
 
