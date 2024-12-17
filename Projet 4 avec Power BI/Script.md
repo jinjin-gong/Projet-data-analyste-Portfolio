@@ -27,7 +27,6 @@ Voici des exemples de formules DAX pour Power BI.
 
 a) Calculer le taux d’accès à l’eau potable
 Créez un fichier taux_acces_potable.dax :
-
 ```
 Taux_Acces_EauPotable = 
 DIVIDE(
