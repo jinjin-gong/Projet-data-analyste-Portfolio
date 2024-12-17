@@ -33,7 +33,7 @@ DIVIDE(
     0
 )
 ```
-   b) Évolution du taux de mortalité dans le temps:
+    b) Évolution du taux de mortalité dans le temps:
 ```
 Evolution_Mortalite = 
 CALCULATE(
@@ -41,7 +41,7 @@ CALCULATE(
     DATESYTD('Date'[Date])
 )
 ```
-   c) Mesure pour filtrer les pays avec une mortalité élevée
+    c) Mesure pour filtrer les pays avec une mortalité élevée
  ```
   Pays_Mortalite_Elevee = 
 IF(
@@ -51,6 +51,7 @@ IF(
 )
 ```
 3. Scripts SQL
+   
    requêtes pour PostgreSQL, MySQL ou autre.
 
    a) Taux de population rurale vs urbaine
@@ -63,7 +64,7 @@ FROM Population
 GROUP BY Pays;
 ```
 ```
-   b) Jointure pour stabilité politique et accès à l'eau:
+    b) Jointure pour stabilité politique et accès à l'eau:
 
 ```
 SELECT 
