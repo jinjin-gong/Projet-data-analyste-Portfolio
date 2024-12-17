@@ -34,7 +34,8 @@ DIVIDE(
 )
 ```
     
-   b) Évolution du taux de mortalité dans le temps:
+    b) Évolution du taux de mortalité dans le temps:
+    
 ```
 Evolution_Mortalite = 
 CALCULATE(
@@ -42,6 +43,7 @@ CALCULATE(
     DATESYTD('Date'[Date])
 )
 ```
+
     c) Mesure pour filtrer les pays avec une mortalité élevée
  ```
   Pays_Mortalite_Elevee = 
