@@ -33,7 +33,8 @@ DIVIDE(
     0
 )
 ```
-    b) Évolution du taux de mortalité dans le temps:
+    
+   b) Évolution du taux de mortalité dans le temps:
 ```
 Evolution_Mortalite = 
 CALCULATE(
