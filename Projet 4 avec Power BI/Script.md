@@ -22,11 +22,8 @@ DWFA-Réaliser une analyse de la condition d'Accèes à l'eau Potable dans le mo
     └── dashboard_screenshot.png
 ```
 2) Scripts DAX
-
 Voici des exemples de formules DAX pour Power BI.
-
-a) Calculer le taux d’accès à l’eau potable
-Créez un fichier taux_acces_potable.dax :
+a) Calculer le taux d’accès à l’eau potable:
 ```
 Taux_Acces_EauPotable = 
 DIVIDE(
@@ -35,8 +32,7 @@ DIVIDE(
     0
 )
 ```
-b) Évolution du taux de mortalité dans le temps
-Créez un fichier evolution_taux_mortalite.dax :
+b) Évolution du taux de mortalité dans le temps:
 ```
 Evolution_Mortalite = 
 CALCULATE(
@@ -45,9 +41,7 @@ CALCULATE(
 )
 ```
 3. Scripts SQL
-Vos calculs ou requêtes pour PostgreSQL, MySQL ou autre.
-a) Taux de population rurale vs urbaine
-Créez un fichier taux_population_rurale.sql :
+a) Taux de population rurale vs urbaine:
 ```
 SELECT 
     Pays, 
@@ -63,8 +57,7 @@ SELECT
 FROM Population
 GROUP BY Pays;
 ```
-b) Jointure pour stabilité politique et accès à l'eau
-Créez un fichier jointure_stabilite_politique.sql :
+b) Jointure pour stabilité politique et accès à l'eau:
 ```
 SELECT 
     p.Pays, 
@@ -75,37 +68,45 @@ JOIN StabilitePolitique s
 ON e.Pays_ID = s.Pays_ID;
 ```
 4. Automatisation en Python
-Si vous utilisez Python pour traiter les données, créez des scripts.
 a) Traitement des données
+```
 preprocess_data.py :
 import pandas as pd
-
+```
 # Chargement des données
+```
 data = pd.read_csv('data/raw/eau_potable.csv')
-
+```
 # Nettoyage des données
+```
 data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
-
+```
 # Export
+```
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
-
 ```
 import pandas as pd
 
 # Chargement des données
+```
 data = pd.read_csv('data/raw/eau_potable.csv')
+```
 
 # Nettoyage des données
+```
 data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
-
+```
 # Export
+```
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
 ```
 visualisation_data.py :
+```
 import pandas as pd
 import matplotlib.pyplot as plt
+```
 
 # Chargement des données nettoyées
 data = pd.read_csv('data/processed/data_clean.csv')
