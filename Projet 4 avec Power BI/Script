@@ -1,4 +1,3 @@
-'''
 ## Scripts utilisés dans le projet
 
 ### 1. **Scripts SQL**
@@ -18,4 +17,3 @@ Scripts pour transformer et préparer les données dans Power BI avec Power Quer
 
 - [transformation_etape1.m](scripts/powerquery/transformation_etape1.m) : Transformation initiale des données.
 - [fusion_tables.m](scripts/powerquery/fusion_tables.m) : Fusion de plusieurs tables.
-'''
