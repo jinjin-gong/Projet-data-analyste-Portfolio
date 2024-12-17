@@ -16,17 +16,19 @@ Créer un tableau de bord synthétique permettant d'identifier les pays nécessi
 
 **Méthodologie:**
 
-◦ **A. Phases du projet :**
+**A. Phases du projet :**
         1. Recherche et analyse des besoins (brief, réunion de lancement).
         2. Préparation des données (exploration, nettoyage, transformation).
         3. Conception des mockups et blueprint.
         4. Réalisation du tableau de bord.
         5. Synthèse et présentation finale.
-◦ **B. Objectifs techniques :**
+        
+**B. Objectifs techniques :**
         ▪ Création de visualisations impactantes.
         ▪ Intégration de filtres interactifs pour l'exploration des données.
         ▪ Analyse évolutive et agrégations géographiques.
-****◦ **C. Données et indicateurs clés**
+        
+**C. Données et indicateurs clés**
     ◦ **Sources de données :** Données internes DWFA, OMS, FAO, dictionnaire des données fourni.
     ◦ **Indicateurs sélectionnés :**
         ▪ Taux d’accès à l’eau potable.
@@ -37,36 +39,37 @@ Créer un tableau de bord synthétique permettant d'identifier les pays nécessi
     ◦ **Traitements réalisés :**
         ▪ Nettoyage des données pour supprimer les anomalies.
         ▪ Agrégation des indicateurs à différents niveaux géographiques.
-**◦ D. Mockups et Blueprint**
+        
+**D. Mockups et Blueprint**
     ◦ Intégrez des captures ou visuels des mockups réalisés pour les vues (mondiale, continentale, nationale).
 
     ◦ Décrivez brièvement chaque vue :
         ▪ **Vue mondiale :** Carte interactive des indicateurs agrégés.
         ▪ **Vue continentale :** Comparaison entre les continents (diagrammes).
         ▪ **Vue nationale :** Analyse détaillée des indicateurs d’un pays.
+        
 **Résultat final**
-    ◦ **Visualisations clés :**
+    **Visualisations clés :**
         ▪ Carte du monde avec taux d’accès à l’eau potable.
         ▪ Line plot montrant l’évolution des indicateurs.
         ▪ Scatter plot pour comparer deux indicateurs.
-    ◦ **Fonctionnalités interactives :**
+    **Fonctionnalités interactives :**
         ▪ Filtres géographiques, temporels et qualitatifs.
         ▪ Navigation intuitive entre les vues.
-
-    ◦ **Impact pour DWFA :**
+    **Impact pour DWFA :**
         ▪ Identification rapide des pays prioritaires pour les investissements.
         ▪ Meilleure compréhension des besoins par domaine d’expertise.
-    ◦ **Apprentissages personnels :**
+    **Apprentissages personnels :**
         ▪ Analyse multi-niveaux (mondiale, continentale, nationale).
         ▪ Création de visualisations interactives pour la prise de décision.
 
 **Compétences mises en avant**
-    ◦ **Techniques de data analysis :**
+    **Techniques de data analysis :**
         ▪ Exploration et nettoyage des données.
         ▪ Création d’indicateurs calculés et agrégés.
-    ◦ **Visualisation de données :**
+    **Visualisation de données :**
         ▪ Maîtrise de Tableau / Power BI.
         ▪ Utilisation de cartes, line plots, bar plots, scatter plots.
-    ◦ **Gestion de projet :**
+    **Gestion de projet :**
         ▪ Traduction des besoins en fonctionnalités concrètes.
         ▪ Conception de mockups et blueprint.
