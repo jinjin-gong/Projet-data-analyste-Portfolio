@@ -24,7 +24,7 @@ DWFA-Réaliser une analyse de la condition d'Accèes à l'eau Potable dans le mo
 2) Scripts DAX
 Exemples de formules DAX pour Power BI.
 
-   a) Calculer le taux d’accès à l’eau potable:
+a) Calculer le taux d’accès à l’eau potable:
 ```
 Taux_Acces_EauPotable = 
 DIVIDE(
@@ -32,9 +32,8 @@ DIVIDE(
     SUM('EauPotable'[Population_Totale]),
     0
 )
-```
-    
-    b) Évolution du taux de mortalité dans le temps:
+```  
+b) Évolution du taux de mortalité dans le temps:
     
 ```
 Evolution_Mortalite = 
@@ -43,8 +42,7 @@ CALCULATE(
     DATESYTD('Date'[Date])
 )
 ```
-
-    c) Mesure pour filtrer les pays avec une mortalité élevée
+c) Mesure pour filtrer les pays avec une mortalité élevée
  ```
   Pays_Mortalite_Elevee = 
 IF(
@@ -57,7 +55,7 @@ IF(
    
    requêtes pour PostgreSQL, MySQL ou autre.
 
-   a) Taux de population rurale vs urbaine
+a) Taux de population rurale vs urbaine
 ```
 SELECT 
     Pays, 
@@ -66,8 +64,7 @@ SELECT
 FROM Population
 GROUP BY Pays;
 ```
-```
-    b) Jointure pour stabilité politique et accès à l'eau:
+b) Jointure pour stabilité politique et accès à l'eau:
 
 ```
 SELECT 
@@ -78,24 +75,28 @@ FROM EauPotable e
 JOIN StabilitePolitique s 
 ON e.Pays_ID = s.Pays_ID;
 ```
-
 4. Automatisation en Python
 
-   a) Traitement des données
+a) Traitement des données
 ```
 import pandas as pd
-
-# Chargement des données
+```
+   # Chargement des données
+```
 data = pd.read_csv('data/raw/eau_potable.csv')
+```
 
-# Nettoyage des données
+   # Nettoyage des données
+```
 data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
+```
 
-# Export
+   # Export
+```
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
 ```
-    b) Création de visualisations
+b) Création de visualisations
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
