@@ -69,12 +69,6 @@ FROM EauPotable e
 JOIN StabilitePolitique s 
 ON e.Pays_ID = s.Pays_ID;
 ```
-4. Automatisation en Python
-a) Traitement des données
-```
-preprocess_data.py :
-import pandas as pd
-```
 # Chargement des données
 ```
 data = pd.read_csv('data/raw/eau_potable.csv')
@@ -103,15 +97,19 @@ data_clean = data.dropna(subset=['Taux_AccesEau', 'Population_Totale'])
 ```
 data_clean.to_csv('data/processed/data_clean.csv', index=False)
 print("Données nettoyées et exportées.")
+```
 ```
 visualisation_data.py :
+```
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
 # Chargement des données nettoyées
+```
 data = pd.read_csv('data/processed/data_clean.csv')
+```
 
 # Création du graphique
 ```
